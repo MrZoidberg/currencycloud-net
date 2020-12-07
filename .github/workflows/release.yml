@@ -1,21 +1,13 @@
-name: Build
+name: Release
 
 on:
-  pull_request:
   push:
-    branches:
-
-env:
-  # Set the DOTNET_SKIP_FIRST_TIME_EXPERIENCE environment variable to stop wasting time caching packages
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-  # Disable sending usage data to Microsoft
-  DOTNET_CLI_TELEMETRY_OPTOUT: true
-  # Set the build number in MinVer
-  MINVERBUILDMETADATA: build.${{github.run_number}}
+    tags:
+      - '*'
 
 jobs:
   build:
-    name: Build
+    name: Release
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -38,4 +30,7 @@ jobs:
       shell: pwsh
     - name: 'Dotnet Cake Pack'
       run: dotnet cake --target=Pack
+      shell: pwsh
+    - name: 'Dotnet Cake Publish'
+      run: dotnet cake --target=Publish --nuget-key="${{secrets.NUGET_API_KEY}}"
       shell: pwsh

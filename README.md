@@ -1,11 +1,11 @@
-[![NuGet version](https://img.shields.io/nuget/v/CurrencyCloud.svg)](https://www.nuget.org/packages/CurrencyCloud/) [![Travis](https://img.shields.io/travis/CurrencyCloud/currencycloud-net.svg)](https://travis-ci.org/CurrencyCloud/currencycloud-net)
+[![NuGet version](https://img.shields.io/nuget/v/CurrencyCloud-Core.svg)](https://www.nuget.org/packages/CurrencyCloud-Core/) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/MrZoidberg/currencycloud-net/Build) 
 # Currencycloud
 This is the official .NET SDK for v2 of Currencycloud's API. Additional documentation for each API endpoint can be found at [Currencycloud API documentation][introduction]. If you have any queries or you require support, please contact our development team at development@currencycloud.com
 
 ## Installation
 The library is distributed on `NuGet`. To install the latest version, run the following command in the Package Manager Console: 
 ```sh
-PM> Install-Package Currencycloud-core
+PM> Install-Package Currencycloud-Core
 ```
 
 ## Supported .NET versions
