@@ -2,7 +2,7 @@
 <package>
     <metadata>
         <id>CurrencyCloud-Core</id>
-        <version>7.0.0</version>
+        <version>7.0.1</version>
         <title>Currencycloud Client Library for .NET Core</title>
         <authors>Currencycloud</authors>
         <owners>Currencycloud</owners>
